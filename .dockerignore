@@ -1,0 +1,6 @@
+# we only have a dev environment, so all of these are just trying
+# to prevent the docker cache from busting if we aren't messing
+# with anything that should trigger a rebuild
+*.ipynb
+Makefile
+README.md
