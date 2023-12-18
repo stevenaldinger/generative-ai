@@ -1,0 +1,54 @@
+---
+version: '3.9'
+services:
+  jupyter:
+    container_name: jupyter
+    image: local/jupyter-generative-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+    - sh
+    - -c
+    - fix-permissions "/home/${USER}" && start-notebook.sh
+    environment:
+      CHOWN_HOME: 'no'
+      # hardcoded password for jupyter notebook server so we can easily login
+      JUPYTER_TOKEN: meatwad
+      # special env vars for permission management in the docker image
+      NB_UID: $UID
+      NB_USER: $USER
+      # lets us import common helper functions easily
+      PYTHONPATH: /home/$USER/work/modules
+      # Google Cloud project with billing enabled
+      GCP_PROJECT: ${GCP_PROJECT}
+      # Google Cloud region for Vertex AI
+      GCP_REGION: ${GCP_REGION}
+      # Google Cloud Storage bucket for storing data
+      GCP_BUCKET_NAME: ${GCP_BUCKET_NAME}
+      # GITHUB_TOKEN for generative code
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      # Google API Key for custom search engine (enabled in GCP project)
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      # Custom Search Engine
+      GOOGLE_CSE_ID: ${GOOGLE_CSE_ID}
+    ports:
+    # for gradio and chromadb viz
+    - 5000:5000
+    # for jupyter notebook server
+    - 8888:8888
+    # for pydoc server
+    - 9999:9999
+    user: root
+    volumes:
+    # for sharing data between local and the container
+    - ./data:/home/$USER/work/data
+    # for generating documentation
+    - ./docs:/home/$USER/work/docs
+    # for custom modules / helper functions
+    - ./modules:/home/$USER/work/modules
+    # for a persistent workspace
+    - ./notebooks:/home/$USER/work/notebooks
+    # uses the current user's creds for google application
+    # default credentials (for GCP API's / GCS bucket access)
+    - ${HOME}/.config/gcloud:/home/$USER/.config/gcloud
