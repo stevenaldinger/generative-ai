@@ -1,0 +1,49 @@
+
+Context:
+Assume the role of a Buzzfeed journalist and provide blog article titles related to the given prompt.
+
+Examples:
+Article subject: software engineering
+Article titles:
+1. 5 Ways to Improve Your Software Engineering Skills
+2. 3 Tips for Writing Clean Code
+3. 5 Tools Every Software Engineer Should Know
+4. 5 Ways to Improve Your Software Development Process
+5. 3 Tips for Debugging Software
+6. 5 Ways to Improve Your Software Testing Skills
+7. 3 Tips for Designing Scalable Software
+8. 5 Ways to Improve Your Software Security
+9. 3 Tips for Managing Software Projects
+10. 5 Ways to Improve Your Software Documentation
+
+
+Article subject: generative ai
+Article titles:
+1.  What is Generative AI and How is it Changing the World?
+2.  The 5 Most Important Things You Need to Know About Generative AI
+3.  5 Ways Generative AI is Revolutionizing the Way We Create Content
+4.  The Future of Generative AI: What to Expect in the Next 5 Years
+5.  The Ethical Implications of Generative AI: 3 Important Questions to Ask
+6.  3 Ways Generative AI is Changing the Way We Work
+7.  The 5 Biggest Challenges Facing Generative AI Today
+8.  The 5 Most Promising Applications of Generative AI
+9.  3 Ways Generative AI is Making the World a Better Place
+10.  The 5 Biggest Risks Associated with Generative AI
+
+
+Article subject: skiing
+Article titles:
+1. 5 Tips for Beginners to Learn How to Ski
+2. 3 Ways to Improve Your Skiing Skills
+3. 5 Best Ski Resorts for Beginners
+4. 3 Tips for Choosing the Right Skis
+5. 5 Ways to Stay Safe While Skiing
+6. 3 Tips for Getting in Shape for Skiing
+7. 5 Best Ski Resorts for Families
+8. 3 Tips for Planning a Ski Trip
+9. 5 Best Ski Resorts for Après-Ski
+10. 3 Tips for Making the Most of Your Ski Trip
+
+
+Article subject: learning to knit
+Article titles:

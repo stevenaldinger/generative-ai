@@ -1,0 +1,12 @@
+# annoying file MacOS creates
+.DS_Store
+
+# contains secrets
+.env
+
+# we only want to commit the actual notebook
+.ipynb_checkpoints
+
+# gets generated in our notebooks/modules directories
+__pycache__
+
