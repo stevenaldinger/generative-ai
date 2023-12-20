@@ -18,6 +18,7 @@ variable "storage_bucket_name" {
 variable "user_email_address" {
   description = "The email address of the user to grant access to the service account."
   type        = string
+  default     = ""
 }
 
 variable "chatbot_service_image" {

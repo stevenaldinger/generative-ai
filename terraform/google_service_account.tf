@@ -21,6 +21,8 @@ module "vertex_ai_sa" {
 }
 
 resource "google_service_account_iam_member" "vertex_ai_service_account" {
+  count  = var.user_email_address == "" ? 0 : 1
+
   service_account_id = "projects/${var.gcp_project_id}/serviceAccounts/${module.vertex_ai_sa.email}"
   role               = "roles/iam.serviceAccountUser"
   member             = "user:${var.user_email_address}"
