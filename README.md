@@ -31,7 +31,23 @@ There is a single-command setup for starting up the development environment, and
 
 ## Getting Started
 
-Follow the guide in [docs/developer-guide/02_getting_started.md](docs/developer-guide/02_getting_started.md) to get started.
+I recommend following the comprehensive guide in [docs/developer-guide/02_getting_started.md](docs/developer-guide/02_getting_started.md) to get started.
+
+### TLDR for running locally
+
+1. Create a new GCP Project manually
+2. Add the GCP project ID to the [.env](.env)
+3. Run `make gcloud_init` to initialize a `gcloud` config for your local machine
+4. Run `make gcloud_login` to authenticate your local machine with your GCP project and configure Docker to use your GCP project's container registry
+5. Run `make terraform_apply` to create the cloud resources needed to run the examples
+6. Run `make start` to start the development environment
+    * Run `make start firefox=true` to start the development environment and automatically open Firefox to the Jupyter notebook environment when it's ready
+
+### TLDR for deploying the chat bot example
+
+1. Run the [react-zero-shot-youtube-transcript-chat.ipynb](notebooks/langchain-react-zero-shot-youtube/react-zero-shot-youtube-transcript-chat.ipynb) notebook to generate an embeddings database (will be saved to `data/chromadb/youtube_transcripts`)
+2. Run `make build_chatbot` to build the chat bot container image and push it to your GCP project's container registry
+3. Run `make terraform_apply` to create the chat bot's service account and deploy the chat bot to Google Cloud Run with a publicly accessible URL
 
 ## Overview of the Stack
 
