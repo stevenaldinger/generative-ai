@@ -25,9 +25,11 @@ There is a single-command setup for starting up the development environment, and
     10. [Engineering Incident Response Question-Answering](#engineering-incident-response-question-answering) (Slack export)
     11. [Repository-Aware Code Generation from Local Repo](#repository-aware-code-generation-local-repo)
     12. [Repository-Aware Code Generation from Remote GitHub Repo](#repository-aware-code-generation-remote-repo)
-4. [Documentation](docs)
+4. [Documentation](docs/README.md)
     1. [Repository Structure](docs/developer-guide/00_repository_structure.md)
     2. [Development Environment Overview](docs/developer-guide/01_dev_environment_overview.md)
+    3. [Getting Started](docs/developer-guide/02_getting_started.md)
+    4. [Deploying the Cloud Run App](docs/developer-guide/03_deploying_cloud_run_app.md)
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 # Deploying the Cloud Run Chat Bot App
 
-First, run the following to build the chatbot:
+First, run the following to build the chatbot. Note that it can take a while to build on newer MacOS machines because it needs to build an `amd64` image (not ARM) and the cross-platform build tools slow things down an order of magnitude. It took 7 minutes to build on my M1 Macbook.
 ```sh
 make build_chatbot
 ```
