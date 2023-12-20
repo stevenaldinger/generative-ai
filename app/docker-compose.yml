@@ -4,6 +4,9 @@ services:
   chatbot:
     container_name: chatbot
     image: gcr.io/${GCP_PROJECT:-local}/chatbot:${IMAGE_TAG:-latest}
+    # required because this image is being built for
+    # cloud run which does not run ARM images
+    platform: linux/amd64
     working_dir: /mnt/project/app
     build:
       context: ..
@@ -14,5 +17,7 @@ services:
     volumes:
     - ..:/mnt/project
     - $HOME/.config/gcloud:/root/.config/gcloud
+    environment:
+      CHROMADB_DIR: /mnt/project/data/chromadb/youtube_transcripts
     env_file:
     - ../.env

@@ -54,7 +54,8 @@ verbose = True
 
 # ********************** [START] LLM data config **************************** #
 collection_name = 'youtube-transcript'
-chroma_db_youtube_transcript_dir = '/app/data/chromadb/youtube_transcripts'
+default_chroma_db_dir = '/app/data/chromadb/youtube_transcripts'
+chroma_db_youtube_transcript_dir = os.environ.get('CHROMADB_DIR', default_chroma_db_dir)
 # *********************** [END] LLM data config ***************************** #
 import vertexai
 

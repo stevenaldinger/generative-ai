@@ -26,7 +26,7 @@ This also sets up a [docker credential helper](https://cloud.google.com/artifact
 make gcloud_login
 ```
 
-This will ask you to go to a URL, twice, to login with your email address that created the project, and copy+paste a key into the terminal. This is annoying, but it's setting up your normal user auth as well as [application default credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev).
+This will ask you (twice) to go to a URL in your browser in order to login with your email address that created the project, and then you'll need to copy+paste a key from your browser into the terminal. This is annoying, but it's setting up your normal user auth as well as [application default credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev).
 
 ## Project and Infrastructure Setup
 
@@ -42,7 +42,7 @@ When you're comfortable with the changes Terraform is going to make, run the fol
 make terraform_apply
 ```
 
-To destroy everything when you're done, run the following command:
+To destroy everything when you're finished working with this repo, run the following command:
 ```sh
 make terraform_destroy
 ```

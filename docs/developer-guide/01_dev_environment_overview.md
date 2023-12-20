@@ -1,5 +1,9 @@
 # Development Environment
 
+This is a containerized development environment that's powered by [Docker](https://docs.docker.com/get-docker/). You'll need to install that before you can run the commands that set up Google Cloud and your local development environment.
+
+## Overview
+
 The development environment works by mounting certain directories from your local machine into the container and configuring permissions to match your local user. This allows you to edit the code on your local machine or add PDFs and other artifacts to work with while still running code inside the container. The following directories are mounted inside the container:
 - `data/` - this is where you'll place any data files you want to use in your notebooks
 - `docs/` - there's a command to automatically generate documentation from the Python modules, and that gets generated into the `docs/modules/`
