@@ -9,6 +9,9 @@ This is the furthest thing from production ready code or a production ready conf
 To build and image and run the container locally, run the following command:
 ```sh
 make start_chatbot
+
+# to stop
+make stop_chatbot
 ```
 
 The chat bot interface will be available at [localhost:8080](http://localhost:8080).
