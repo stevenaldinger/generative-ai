@@ -14,5 +14,7 @@ services:
     volumes:
     - ..:/mnt/project
     - $HOME/.config/gcloud:/root/.config/gcloud
+    environment:
+      CHROMADB_DIR: /mnt/project/data/chromadb/youtube_transcripts
     env_file:
     - ../.env
