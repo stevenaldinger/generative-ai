@@ -1,5 +1,13 @@
 # Getting Started
 
+## Download and Install Docker
+
+Follow the instructions here to download and install Docker: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/).
+
+After you get it running, make sure to check your Docker preferences and increase the CPU and memory limits if it seems like it's not being given much to work with by default. I don't have recommended settings, but even the dependency installation step can take a while if you don't give Docker enough resources.
+
+This only runs a single container though, so you shouldn't need to worry about it taking over your whole machine.
+
 ## Google Cloud Project Setup
 
 Follow the steps in [docs/google-project-setup/README.md](../google-project-setup/README.md) to set up a Google Cloud project for use with this repo.
